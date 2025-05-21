@@ -2,8 +2,8 @@ module.exports = {
   config: {
     name: "uptime",
     aliases: ["up", "upt"],
-    version: "1.0",
-    author: "VEX_ADNAN",
+    version: "1.2",
+    author: "efat",
     role: 0,
     shortDescription: {
       en: "Displays the uptime of the bot."
@@ -16,13 +16,29 @@ module.exports = {
       en: "Use {p}uptime to display the uptime of the bot."
     }
   },
-  onStart: async function ({ api, event, args }) {
-    const uptime = process.uptime();
+
+  onStart: async function ({ api, event }) {
+    const uptime = process.uptime(); // seconds
+
     const seconds = Math.floor(uptime % 60);
     const minutes = Math.floor((uptime / 60) % 60);
-    const hours = Math.floor((uptime / (60 * 60)) % 24);
-    const days = Math.floor(uptime / (60 * 60 * 24));
-    const uptimeString = `\n\nl ꙰ → ${hours} ʜᴏᴜʀs\n\nl ꙰ → ${minutes} ᴍɪɴᴜᴛᴇs\n\nl ꙰ → ${seconds} sᴇᴄᴏɴᴅ\n\n✧─────────────────✧`;
-    api.sendMessage(`✧─────────────────✧\n\n💥 ʜᴇʟʟᴏ ᴍᴇɪsᴛᴇʀ, ᴛʜᴇ ʙᴏᴛ ʜᴀs ʙᴇᴇɴ ʀᴜɴɴɪɴɢ ғᴏʀ ↓\n↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ ${uptimeString}`, event.threadID);
+    const hours = Math.floor((uptime / 3600) % 24);
+    const days = Math.floor(uptime / 86400);
+
+    const statusMessage = `✧──────〔 BOT STATUS 〕─────✧
+
+💠 ʜᴇʟʟᴏ ᴍᴇɪsᴛᴇʀ!
+ʙᴏᴛ ᴜᴘᴛɪᴍᴇ:
+
+📅 Days   : ${days} ᴅ
+⏱️ Hours  : ${hours} ʜ
+⏳ Minutes: ${minutes} ᴍ
+⏰ Seconds: ${seconds} s
+
+✅ Status  : ONLINE
+
+✧──────────────────────✧`;
+
+    api.sendMessage(statusMessage, event.threadID);
   }
 };
