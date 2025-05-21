@@ -100,7 +100,7 @@ module.exports = {
 ╰‣ 𝐄𝐅𝐔𝐔 𝐁𝐁𝐘𝐙  
 
 ╭‣ 𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 ⓕ  
-╰‣ https://m.me/Efuu.chen`;
+╰‣ https://www.facebook.com/profile.php?id=61576088924774`;
 
             return message.reply(prefixMessage);
         }
