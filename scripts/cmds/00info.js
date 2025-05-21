@@ -33,12 +33,12 @@ module.exports = {
   },
 
   sendInfo: async function (message) {
-    const botName = " 🕸️ 𝐒𝐩𝐢𝐝𝐞𝐘🕷️ ";
-    const botPrefix = "𝐄𝐫𝐞𝐧 ";
-    const authorName = "𝐑𝐚𝐚𝐝";
-    const authorFB = "𝐑𝐚 𝐀𝐚𝐝";
-    const authorInsta = "raadx102";
-    const status = " 𝗦𝗶𝗻𝗴𝗹𝗲";
+    const botName = " 🎀𝑵𝒆𝒌𝒐 𝑨𝑰🎀 ";
+    const botPrefix = " - ";
+    const authorName = "E F A T";
+    const authorFB = "AN TIK";
+    const authorInsta = "NO";
+    const status = "𝐌𝐢𝐧𝐠𝐞𝐥";
 
     const urls = JSON.parse(fs.readFileSync('scripts/cmds/assets/Ayan.json'));
     const link = urls[Math.floor(Math.random() * urls.length)];
@@ -55,7 +55,7 @@ module.exports = {
     const uptimeString = `${hours}h ${minutes}m ${seconds}sec`;
 
     message.reply({
-      body: `                              🎀           𝐀𝐝𝐦𝐢𝐧 𝐈𝐧𝐟𝐨         ☮
+      body: `                              🎀           𝐀𝐝𝐦𝐢𝐧 𝐈𝐧𝐟𝐨         🎀
 ────────────────
 𝐍𝐚𝐦𝐞 :  ${authorName}  
 
